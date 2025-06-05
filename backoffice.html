@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandalefruta.com | Backoffice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fruit.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/backoffice.js"></script>
+</head>
+<body>
+    <header> 
+        <div class="header">
+            <div class="titles">
+                <h1>mandalefruta.com</h1>
+                <h2>Administración de productos</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="backoffice-products">
+            <h3>Realiza un alta, baja, o modificación de tus productos.</h3>
+            <div class="abm-controls">
+                <button class="btn-nuevo" title="Agrega un nuevo producto">Nuevo Producto</button>
+            </div>
+            <dialog>
+                <h3>ABM Productos</h3>
+                <label for="inputId">
+                    <input type="number" id="inputId" placeholder="id" readonly autocomplete="off">
+                </label>
+                <label for="inputImagen">
+                    <input type="text" id="inputImagen" placeholder="img" autocomplete="off">
+                </label>
+                <label for="inputNombre">
+                    <input type="text" id="inputNombre" placeholder="Nombre" autocomplete="off">
+                </label>
+                <label for="inputPrecio">
+                    <input type="number" id="inputPrecio" placeholder="Precio (ARS)" autocomplete="off" min="0" max="10000" step="1">
+                </label>
+                <label for="selectCategoria">
+                    <select id="selectCategoria">
+                        <option disabled selected>Selecciona una opción...</option>
+                        <option>Fruta</option>
+                        <option>Verdura</option>
+                        <option>Comida</option>
+                        <option>Bebida</option>
+                    </select>
+                </label>
+                <button id="btnGuardar">Guardar</button>
+                <button id="btnEliminar" title="Pulsa para eliminar el Producto actual">Confirma Eliminar</button>
+                <p class="mensaje"><em>Pulsa la tecla <code>ESC</code> para cerrar esta ventana.</em></p>
+            </dialog>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Quitar</th>
+                        <th>Modificar</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr data-filaCodigo="1">
+                        <td id="pImagen"></td>
+                        <td id="nombre">dasdasd</td>
+                        <td id="price">$ 0.00</td>
+                        <td id="categoría">Categoria</td>
+                        <td id="delButton" 
+                            data-codigo="" 
+                            title="Clic para eliminar">
+                            ⛔️
+                        </td>
+                        <td id="editButton" 
+                            data-codigo="" 
+                            title="Clic para Modificar">
+                            ✍️
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
