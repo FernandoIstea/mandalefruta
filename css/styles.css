@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-@import url('toastitv1.0.modern.min.css');
-
 body {
     user-select: none;
     margin: 0;
@@ -10,16 +8,10 @@ body {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -29,7 +21,7 @@ body {
 
     & h1, h2 {
         margin: 0;
-        color: #000000;
+        color: #333;
     }
 
     & h1 {
@@ -41,13 +33,13 @@ body {
         padding-top: 10px;
         font-size: 16px;
         font-weight: 300;
-        color: #060606;
+        color: #7b7b7b;
     }
 }
 
 .shoping-cart {
     float: right;
-    margin-right: 40px;
+    margin-right: 20px;
 
     & img {
         width: 32px;
@@ -61,10 +53,6 @@ body {
     }
 }
 
-.girar-trompo {
-    animation: trompoGiro 0.7s forwards;
-}
-
 .categories {
     gap: 40px;
     display: flex;
@@ -72,7 +60,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-content: space-between;
-    padding-top: 80px;
+    padding-top: 40px;
 
     & span {
         padding-bottom: 4px;
@@ -98,21 +86,11 @@ body {
     }
 }
 
-.categories-warning {
-    padding: 16px;
-    font-size: medium;
-    font-weight: 500;
-    background-color: rgba(255, 255, 0, 0.506);
-    border: 2px solid yellow;
-    border-radius: 8px;
-    box-shadow: 6px 6px 10px rgba(211, 211, 211, 0.585);
-}
-
 .search-bar {
     flex: 1;
     display: flex;
     justify-content: center;
-    padding-top: 160px;
+    padding-top: 30px;
     
     & input[type="search"] {
         outline: none;
@@ -127,16 +105,13 @@ body {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    /* input[type="search"]:hover, */
     & input[type="search"]:focus {
         background: #ffffff;
     }
 
     & input[type="search"]::placeholder {
         opacity: .21;
-    }
-
-    & input[type="search"]:focus::placeholder {
-        opacity: .07;
     }
 }
 
@@ -156,7 +131,6 @@ body {
     align-content: center;
     max-width: 900px;
     margin: 0 auto;
-    padding-top: 120px;
 }
 
 dialog {
@@ -341,7 +315,7 @@ article {
     margin: 0 auto;
     flex-direction: column;
     justify-content: center;
-    padding-top: 140px;
+    padding-top: 30px;
 
         & h2 {
             font-size: 20px;
@@ -352,6 +326,7 @@ article {
 table {
     padding-top: 20px;
     border-collapse: collapse;
+    /* max-width: 600px; */
     
     & thead tr {
         background-color: #333;
@@ -363,21 +338,10 @@ table {
             padding: 10px;
             font-weight: 500;
         }
-
-        & th#topLeft {
-            border-top-left-radius: 10px;
-
-        }
-
-        & th#topRight {
-            border-top-right-radius: 10px;
-        }
     }
 
     & tbody {            
         & tr {                            
-            height: 24px;
-
             & td#pImagen {
                 text-align: center;
                 font-size: 2rem;
@@ -512,14 +476,6 @@ table {
     padding-left: 20%;
 }
 
-.categoria-title {
-    text-align: center;
-    display: block;
-    width: 100%;
-    font-weight: 600;
-    font-size: 1.4rem;
-}
-
 .card-error {
     padding: 20px;
     max-width: 600px;
@@ -563,10 +519,38 @@ table {
 }
 
 .card-no-products {
-    filter: grayscale(100%);
+    padding: 20px;
+    max-width: 600px;
+    color: #f4f4f4;
+    text-align: center;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    & button {
-        opacity: 0.2;
+    & h3 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    & div.emoji-carrito {
+        font-size: 40px;
+
+        & span {
+            font-size: 20px;
+        }
+    }
+
+    & h4 {
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    & p {
+        font-size: 12px;
+        font-weight: 200;
     }
 }
 
@@ -595,32 +579,29 @@ table {
     }
 
     & .product-price {
-        font-size: 18px;
-        font-weight: 600;
-        color: rgb(0, 40, 113);
+        font-size: 16px;
+        color: cornflowerblue;
         padding-bottom: 10px;
     }
 
     & .buy-button button {
         border: 0;
         padding: 8px;
-        width: 180px;
+        width: 160px;
         outline: none;
         color: white;
         cursor: pointer;
         border-radius: 4px;
-        margin-top: 60px;
-        padding-top: 12px;
         padding-bottom: 10px;
-        background-color: rgb(0, 83, 237);
+        background-color: rgba(100, 148, 237, 0.788);
     }
 
     & .buy-button button:hover {
-        background-color: rgb(0, 56, 159);
+        background-color: cornflowerblue;
     }
 
     & .buy-button button:active {
-        background-color: rgb(4, 38, 101);
+        background-color: rgb(79, 118, 189);
         transform: scale(.98);
     }
 }
@@ -681,14 +662,12 @@ footer {
     bottom: 10px;
     right: 10px;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
     transition: transform 0.9s ease-in;
-    width: 32px;
-    height: 32px;
 
     & img {
-        /* opacity: .4; */
-        width: 32px;
-        height: 32px;
+        opacity: .4;
     }
 }
 
@@ -714,17 +693,8 @@ button:disabled:active {
     border-right-color: orangered;
     border-top-color: yellowgreen;
     border-bottom-color: lightsalmon;
+
     animation: spin 1s ease infinite;
-}
-
-.quitar-fila {
-    animation: ocultarFila 1s ease-out;
-}
-
-.input-focused {
-    transition: .3s ease-in-out;
-    background-color: rgb(0, 0, 0);
-    opacity: .7;
 }
 
 @keyframes spin {
@@ -733,14 +703,6 @@ button:disabled:active {
     } 100% {
         transform: rotate(360deg);
     }
-}
-
-@keyframes ocultarFila {
-  from {
-    opacity: 1;
-  } to {
-    opacity: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -794,23 +756,5 @@ button:disabled:active {
             height: 50px;
             border-radius: 6px;
         }
-    }
-}
-
-@keyframes trompoGiro {
-    0% {
-        transform: scale(1) rotate(0deg);
-        animation-timing-function: ease-in;
-    }
-    20% {
-        transform: scale(1.9) rotate(720deg);
-        animation-timing-function: cubic-bezier(0.4, 0, 1, 1); /* fuerte aceleración */
-    }
-    80% {
-        transform: scale(1.6) rotate(1620deg); /* 4.5 vueltas */
-        animation-timing-function: ease-out;
-    }
-    100% {
-        transform: scale(1) rotate(1800deg); /* 5 vueltas */
     }
 }
